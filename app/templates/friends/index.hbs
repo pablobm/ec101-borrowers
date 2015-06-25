@@ -3,6 +3,10 @@
 <h2>Total friends: {{model.length}}</h2>
 <ul>
   {{#each friend in model}}
-    <li>{{friend.firstName}} {{friend.lastName}}</li>
+  <li>
+    {{#link-to 'friends.show' friend}}
+      {{friend.firstName}} {{friend.lastName}}
+    {{/link-to}}
+  </li>
   {{/each}}
 </ul>
