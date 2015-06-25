@@ -1,6 +1,9 @@
 <h1>Friends Index</h1>
 
 <h2>Total friends: {{model.length}}</h2>
+
+<p>{{link-to "Create new friend" 'friends.new'}}</p>
+
 <ul>
   {{#each friend in model}}
     <li>{{link-to friend.fullName 'friends.show' friend}}</li>
