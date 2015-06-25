@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     },
     cancel: function() {
       console.log('+--- cancel action in friends route');
-      return true;
+      return false;
     },
   }
 });
