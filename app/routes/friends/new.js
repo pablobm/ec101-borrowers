@@ -5,6 +5,14 @@ export default Ember.Route.extend({
     return this.store.createRecord('friend');
   },
 
+  activate: function() {
+    console.log('*** routes/friends/new#activate');
+  },
+
+  deactivate: function() {
+    console.log('*** routes/friends/new#deactivate');
+  },
+
   actions: {
     save: function() {
       console.log('+-- save action in friends new route');
