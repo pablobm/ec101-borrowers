@@ -12,10 +12,16 @@ module.exports = function(app) {
     res.status(201).end();
   });
 
-  articlesRouter.get('/:id', function(req, res) {
+  articlesRouter.get('/articles/:id', function(req, res) {
+    console.log('here');
     res.send({
       'articles': {
-        id: req.params.id
+        id: req.params.id,
+        created_at: new Date().toISOString(),
+        description: 'Coup',
+        state: 'borrowed',
+        nodes: 'bar',
+        friend_id: 27,
       }
     });
   });
