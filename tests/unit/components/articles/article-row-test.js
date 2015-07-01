@@ -1,16 +1,18 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 
 moduleForComponent('articles/article-row', 'Unit | Component | articles/article row', {
-  // Specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar'],
+  needs: ['helper:formatted-date'],
   unit: true
 });
 
 test('it renders', function(assert) {
   assert.expect(2);
 
+  var article = Ember.Object.create();
+
   // Creates the component instance
-  var component = this.subject();
+  var component = this.subject({article});
   assert.equal(component._state, 'preRender');
 
   // Renders the component to the page
